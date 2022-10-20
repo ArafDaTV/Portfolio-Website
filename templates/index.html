@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaidozzaman Araf</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'images/icon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'styles/style.css')}}">
+</head>
+<body>
+    <header id='header'>
+        <div class="user">
+            <img src="{{ url_for('static', filename = 'images/shaidozzaman.jpg') }}" alt="Shaidozzaman Araf" />
+            <h3 class="name"><span>Shaidozzaman </span>Araf</h3>
+            <p class="post">{{information.position}}</p>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- menuClick() function is defined in script.js -->
+    <div id="menu" onclick="menuClick()" class="fas fa-bars"></div>
+    <section class="home" id="home">
+        <h3>{{greeting}}!!!</h3>
+        <h1>I'm <span>Shaidozzaman Araf</span></h1>
+        <p>{{information.about_me}}</p>
+        <a href="#about"><button class="btn"><i class="fas fa-user"></i> About me</button></a>
+    </section>
+    <section class="about" id="about">
+        <h1 class="heading">About <span>Me</span></h1>
+        <div class="row">
+            <div class="info">
+                <h3><span>Name: </span>Shaidozzaman Araf</h3>
+                <h3><span>Age: </span>{{information.age}}</h3>
+                <h3><span>Education: </span>{{information.education}}</h3>
+                <h3><span>Country: </span>Bangladesh</h3>
+                <h3><span>Programming Languages: </span>{{information.programming_languages}}</h3>
+                <h3><span>Expert in: </span>{{information.expert_in}}</h3>
+            </div>
+            <div class="counter">
+                <div class="box">
+                    <span>{{information.experience_years}}</span>
+                    <h3>Years of experience</h3>
+                </div>
+                <div class="box">
+                    <span>{{information.projects_completed}}</span>
+                    <h3>Projects Completed</h3>
+                </div>
+                <div class="box">
+                    <span>{{information.happy_clients}}</span>
+                    <h3>Happy Clients</h3>
+                </div>
+            </div>
+        </div>
+        <a href="#contact"><button class="btn"><i class="fa fa-address-book"></i> Contact Me</button></a>
+    </section>
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact <span>Me</span></h1>
+        <div class="row">
+            <div class="content">
+                <h3 class="information"><span>contact </span>information</h3>
+                <div class="contact-info">
+                    <h3><i class="fa-solid fa-envelope"></i> Email: <span>shaidozzaman21@gmail.com</span></h3>
+                </div>
+                <h3 class="title">Get in <span>touch</span></h3>
+                <div class="get-in-touch">
+                    <a href="https://www.fiverr.com/shaidozzaman21" class="btn">Visit My Fiverr<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="mailto:shaidozzamanaraf21@gmail.com" class="btn">Email Me<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <form action="" method="post">
+                <input type="text" placeholder="Your Name" class="box" name="username">
+                <input type="text" placeholder="Your Email" class="box" name="email">
+                <input type="text" placeholder="Subject" class="box" name="subject">
+                <textarea id="" cols="30" rows="10" class="box message" placeholder="Message" name="message"></textarea>
+                <h1>This feature is not available right now, see other contact information!</h1>
+                <button class="btn" id="message-send" disabled><i class="fas fa-paper-plane"></i>Send</button>
+            </form>
+        </div>
+    </section>
+    <script src="{{url_for('static', filename='scripts/script.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaidozzaman Araf</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename = 'images/icon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'styles/submit_success.css')}}">
+</head>
+<body>
+    <div class="container">
+        {%if correct %}
+        <h1>Successfully submitted your message!</h1>
+        {% else %}
+        <h1>Form was not entered correctly!</h1>
+        {% endif %}
+        <a href="{{ url_for('index') }}"><button class="btn"><i class="fa fa-arrow-left"></i>Go Back</button></a>
+    </div>
+</body>
+</html>
