@@ -30,4 +30,4 @@ def index():
     return render_template("index.html", greeting = greeting, information = information)
 
 if __name__ == "__main__":
-    serve(app, port=8000)
+    serve(app, host='0.0.0.0', port=8000)
