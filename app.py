@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import random
 import json
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -29,4 +30,4 @@ def index():
     return render_template("index.html", greeting = greeting, information = information)
 
 if __name__ == "__main__":
-    app.run()
+    serve(app, port=8000)
