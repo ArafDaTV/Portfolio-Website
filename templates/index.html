@@ -20,6 +20,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
+                <li><a href="#services">My Services</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
@@ -28,7 +29,8 @@
     <div id="menu" onclick="menuClick()" class="fas fa-bars"></div>
     <section class="home" id="home">
         <h3>{{greeting}}!!!</h3>
-        <h1>I'm <span>Shaidozzaman Araf</span></h1>
+        <h1>My name is <span>Shaidozzaman Araf</span></h1>
+        <h2>I am a <span class="auto-type">Python Freelancer</span></h2>
         <p>{{information.about_me}}</p>
         <a href="#about"><button class="btn"><i class="fas fa-user"></i> About me</button></a>
     </section>
@@ -55,6 +57,32 @@
                 <div class="box">
                     <span>{{information.happy_clients}}</span>
                     <h3>Happy Clients</h3>
+                </div>
+            </div>
+        </div>
+        <a href="#services"><button class="btn"><i class="fa fa-laptop"></i> My Services</button></a>
+    </section>
+    <section class="services" id="services">
+        <h1 class="heading"><span>Services</span> I offer</h1>
+        <div class="services-container">
+            <div class="service-box" style="--clr:orange">
+                <div class="content">
+                    <div class="icon"><ion-icon name="code-slash-outline"></ion-icon></div>
+                    <div class="text">
+                        <h3>Backend Development</h3>
+                        <p>I will do backend web development with Python Django or Flask</p>
+                        <a href="https://www.fiverr.com/shaidozzaman21/do-backend-web-development-with-python" target="_blank">Visit Fiverr</a>
+                    </div>
+                </div>
+            </div>
+            <div class="service-box" style="--clr:lime">
+                <div class="content">
+                    <div class="icon"><ion-icon name="person-circle-outline"></ion-icon></div>
+                    <div class="text">
+                        <h3>Portfolio Website</h3>
+                        <p>I will create a portfolio website with backend functionalities</p>
+                        <a href="https://www.fiverr.com/shaidozzaman21/create-a-portfolio-website" target="_blank">Visit Fiverr</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,5 +114,7 @@
     </section>
     <script src="{{url_for('static', filename='scripts/script.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

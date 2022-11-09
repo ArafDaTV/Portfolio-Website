@@ -29,5 +29,9 @@ def index():
     greeting = random.choice(greetings)
     return render_template("index.html", greeting = greeting, information = information)
 
+@app.route('/rate-me', methods=["GET", "POST"])
+def rate_me():
+    pass
+
 if __name__ == "__main__":
     serve(app, port=8080)

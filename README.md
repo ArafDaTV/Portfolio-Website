@@ -1,2 +1,2 @@
 # Portfolio-Website
-This is my personal portfolio website built with Python Flask
+This is a personal portfolio website built with HTML, CSS, JavaScript and Python. I have used the Python backend web development framework flask to implement the backend functionalities of this website.
