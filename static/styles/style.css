@@ -377,7 +377,7 @@ section {
 .services .services-container .service-box .content .text a {
     position: relative;
     background: var(--clr);
-    color: #2e2e2e;
+    color: #fff;
     padding: 8px 15px;
     display: inline-block;
     text-decoration: none;
