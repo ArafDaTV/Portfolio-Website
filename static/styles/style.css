@@ -172,7 +172,7 @@ section {
 
 .home h2 {
     font-size: 3rem;
-    color: #fff;
+    color: orange !important;
     padding: .5rem 0;
 }
 
